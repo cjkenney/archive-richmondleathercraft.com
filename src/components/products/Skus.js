@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
+import SkuCard from './SkuCard';
+
 export default props => (
   <StaticQuery
     query={graphql`
@@ -22,9 +24,7 @@ export default props => (
     render={({ skus }) => (
       <div>
         {skus.edges.map(({ node: sku }) => (
-          <p key={sku.id}>
-            {sku.product.name} ${sku.price}
-          </p>
+          <SkuCard key={sku.id} title={sku.product.name} price={sku.price} />
         ))}
       </div>
     )}

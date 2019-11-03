@@ -7,8 +7,8 @@ import Skus from '../components/Products/Skus';
 
 const AdvancedExamplePage = () => (
   <Layout>
-    <SEO title='Advanced Example' />
-    <h1>This is the advanced example</h1>
+    <SEO title='Products' />
+    <h1>Products</h1>
     <Skus />
   </Layout>
 );
